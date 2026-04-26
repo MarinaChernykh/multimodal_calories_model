@@ -35,7 +35,7 @@ class MultimodalCaloriesModel(nn.Module):
             nn.Linear(cfg.HIDDEN_DIM * 2 + cfg.HIDDEN_DIM // 4, cfg.HIDDEN_DIM),
             nn.LayerNorm(cfg.HIDDEN_DIM),
             nn.ReLU(),
-            nn.Dropout(cfg.DROPOUT) # DROPOUT = 0.2
+            nn.Dropout(cfg.DROPOUT)
         )
 
         self.regressor = nn.Sequential(
